@@ -1,6 +1,222 @@
+*{
+  margin: 0;padding: 0;
+}
+
+.container{
+  background-color: rgb(51, 161, 101);
+  height: 100vh;
+  
+}
+
+.main{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.Pookie{
+  height: 300px;
+}
+
+.left-content{
+  display: flex;
+}
+
+.grass{
+  display: flex;
+}
+
 .name{
-  border: 5px soild black;
-  background-color: aqua;
-  border-radius: 5px;
-  color: black;
+  color: white;
+}
+
+.name h2{
+  font-size: 5rem
+}
+
+.name p {
+  font-size: larger;
+}
+
+.info{
+  color: white;
+}
+
+.info p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+
+/* .information{
+  display: flex;
+
+}
+
+.ability{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.para {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-weight: bold;
+  color: white;
+}
+
+.bar{
+  width: 500px;
+ }
+
+.range{
+  height: 100%;
+  width: 45%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.attack{
+  height: 100%;
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.defnse{
+  height: 100%;
+  width: 70%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.sp-defnse{
+  height: 100%;
+  width: 45%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.speed{
+  height: 100%;
+  width: 30%;
+  background-color: white;
+  border-radius: 10px;
+} */
+
+.information {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 0 400px;
+  max-width: 1000px; /* You can adjust this width */
+  gap: 20px;
+  width: max-content;
+}
+
+
+.ability {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 1000px;
+}
+
+.para {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.bar {
+  flex-grow: 1;
+  height: 20px;
+  margin: 0 10px;
+}
+
+.range, .attack, .defnse, .sp-defnse, .speed {
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.range {
+  width: 45%;
+}
+
+.attack {
+  width: 50%;
+}
+
+.defnse {
+  width: 70%;
+}
+
+.sp-defnse {
+  width: 45%;
+}
+
+.speed {
+  width: 30%;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  margin: 10px 205px;
+  opacity: 0.3;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  transform: translate(750px, 8px);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.search-icon{
+  transform: translate(501px, 8px);
+}
+
+.main h1{
+  font-size: 15rem;
+  opacity: 0.1;
+  position: absolute;
+  left: 600px;
+  top: 100px;
+  color: white;
+}
+
+.stats{
+  position: absolute;
+  left: 305px;
+  top: 66%;
+  color: white;
+  font-size: 2rem;
+}
+
+.stats {
+  flex-basis: 30%;
 }
