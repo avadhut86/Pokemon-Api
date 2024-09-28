@@ -35,7 +35,7 @@ function App() {
         <div className="main">
          
           <h1>#001</h1>
-          <div className=" ">
+          <div className="img-sideinfo">
             <div className="grass">
               <img src={grass} alt="" />
            
@@ -60,11 +60,30 @@ function App() {
         </div>
 
         <div className="information">
-          <div className="stats">
-              <h3>Stats</h3>
-          </div>
+          <div className="stats"><h3>Stats</h3></div>
+          <div className="para">Hp</div>
+          <div className="bar"><p className="range"></p></div>
+          <div className="number">49</div>
 
-          <div className="ability">
+          <div className="para">Attack</div>
+          <div className="bar"><p className="attack"></p></div>
+          <div className="number">50</div>
+
+          <div className="para">Defense</div>
+          <div className="bar"><p className="defnse"></p></div>
+          <div className="number">70</div>
+
+          <div className="para">Special-Defense</div>
+          <div className="bar"><p className="sp-defnse"></p></div>
+          <div className="number">45</div>
+          
+          <div className="para">Speed</div>
+          <div className="bar"><p className="speed"></p></div>
+          <div className="number">35</div>
+          
+
+          {/* <div className="ability">
+            
             <p className="para">Hp 
               <div className="bar"> <p className="range"></p></div>
               <div>45</div>
@@ -90,7 +109,7 @@ function App() {
               <div>30</div>
             </p>
             
-            </div>
+            </div> */}
         </div>
 
         
