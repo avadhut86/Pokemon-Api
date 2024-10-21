@@ -1,151 +1,114 @@
-*{
-  margin: 0;padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat" !important;
 }
 
-.container{
+.container {
   background-color: rgb(51, 161, 101);
-  height: 100vh;
-  
+  height: 115vh;
 }
 
-.main{
+.main {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: end;
+  margin-top: 130px;
 }
 
-.Pookie{
-  height: 300px;
+.Pookie {
+  /* height: 450px;
+  transform: translate(-155px , 10px); */
+  position: relative;
+  pointer-events: none;
+  height: 350px;
+  width: 350px;
+  z-index: 2;
 }
 
-.left-content{
+.left-content {
   display: flex;
 }
 
-.grass{
+.grass {
   display: flex;
 }
 
-.name{
+.name {
   color: white;
 }
 
-.name h2{
-  font-size: 5rem
+.name h2 {
+  font-size: 4rem;
 }
 
 .name p {
-  font-size: larger;
+  font-size: large;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
-.info{
+.info {
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .info p {
   display: flex;
   justify-content: space-between;
   font-size: 1rem;
-  margin-top: 10px;
   font-weight: bolder;
 }
-
-/* .information{
-  display: flex;
-
-}
-
-.ability{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
-.para {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  font-weight: bold;
-  color: white;
-}
-
-.bar{
-  width: 500px;
- }
-
-.range{
-  height: 100%;
-  width: 45%;
-  background-color: white;
-  border-radius: 10px;
-}
-
-.attack{
-  height: 100%;
-  width: 50%;
-  background-color: white;
-  border-radius: 10px;
-}
-
-.defnse{
-  height: 100%;
-  width: 70%;
-  background-color: white;
-  border-radius: 10px;
-}
-
-.sp-defnse{
-  height: 100%;
-  width: 45%;
-  background-color: white;
-  border-radius: 10px;
-}
-
-.speed{
-  height: 100%;
-  width: 30%;
-  background-color: white;
-  border-radius: 10px;
-} */
-
 .information {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  margin: 0 400px;
-  max-width: 1000px; /* You can adjust this width */
-  gap: 20px;
-  width: max-content;
+  display: grid;
+  grid-template-columns: 200px 150px 550px 200px;
+  align-items: center;
+  row-gap: 27px;
+  transform: translate(240px, 10px);
 }
-
 
 .ability {
   flex-basis: 70%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 1000px;
+  /* width: 1000px; */
 }
 
 .para {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: white;
+  font-weight: 500;
 }
 
 .bar {
-  flex-grow: 1;
-  height: 20px;
-  margin: 0 10px;
+  height: 25px;
+  border: 2px soild gold;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
-.range, .attack, .defnse, .sp-defnse, .speed {
-  height: 100%;
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.range,
+.attack,
+.defnse,
+.sp-defnse,
+.speed {
+  height: 120%;
   background-color: white;
   border-radius: 10px;
+  /* transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards; */
 }
 
 .range {
@@ -167,7 +130,6 @@
 .speed {
   width: 30%;
 }
-
 
 header {
   display: flex;
@@ -196,27 +158,128 @@ nav a {
   font-weight: bold;
 }
 
-.search-icon{
+.search-icon {
   transform: translate(501px, 8px);
 }
 
-.main h1{
-  font-size: 15rem;
+.main h1 {
+  font-size: 17rem;
   opacity: 0.1;
   position: absolute;
-  left: 600px;
-  top: 100px;
-  color: white;
-}
-
-.stats{
-  position: absolute;
-  left: 305px;
-  top: 66%;
-  color: white;
-  font-size: 2rem;
+  left: 500px;
+  top: 50px;
+  color: rgb(255, 255, 255);
 }
 
 .stats {
-  flex-basis: 30%;
+  transform: translate(43px, -1px);
+  color: white;
+  font-size: 2rem;
+  grid-row: 1/6;
+  /* border: 2px solid red; */
+}
+
+.img-sideinfo {
+  margin-bottom: 80px;
+}
+
+.number {
+  color: white;
+}
+
+span {
+  font-weight: 100;
+}
+
+.card-contaner {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 3rem 0.5rem; */
+
+  width: 80%;
+  display: grid;
+  margin: 20px auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+.pokie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.all-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.Card-container {
+  height: 201px;
+  width: 240px;
+  margin: 10px;
+  background-color: rgb(111, 231, 165);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h1 {
+  font-size: 18px;
+  color: white;
+  padding: 15px;
+  margin-left: -134px;
+}
+
+.card-pokie {
+  width: 80px;
+  height: 80px;
+  /* transform: translate(107px, 25px); */
+  margin-left: auto;
+  margin-right: 55px;
+}
+
+.two-info {
+  height: 52px;
+  /* border: 2px solid; */
+  opacity: 0.4;
+  background-color: white;
+  display: grid;
+}
+
+.two-info p {
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.img {
+  width: 100%;
+  display: flex;
+}
+
+.card-mainpage {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.btn-grp button {
+  background-color: rgba(168, 211, 168, 0.893);
+  border-radius: 30px;
+  border: none;
+  width: 150px;
+  height: 30px;
+  margin: 70px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
 }
