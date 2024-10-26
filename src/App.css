@@ -8,9 +8,12 @@
   font-family: "Montserrat" !important;
 }
 
+body{
+  width: 100vw;
+}
+
 .container {
-  background-color: rgb(51, 161, 101);
-  height: 115vh;
+  height: 820px;
 }
 
 .main {
@@ -21,8 +24,6 @@
 }
 
 .Pookie {
-  /* height: 450px;
-  transform: translate(-155px , 10px); */
   position: relative;
   pointer-events: none;
   height: 350px;
@@ -69,7 +70,7 @@
   grid-template-columns: 200px 150px 550px 200px;
   align-items: center;
   row-gap: 27px;
-  transform: translate(240px, 10px);
+  transform: translate(215px, 10px);
 }
 
 .ability {
@@ -87,7 +88,9 @@
 
 .bar {
   height: 25px;
-  border: 2px soild gold;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
   transform: scaleX(0);
   transform-origin: left;
   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
@@ -103,32 +106,29 @@
 .defnse,
 .sp-defnse,
 .speed {
-  height: 120%;
+  height: 100%;
   background-color: white;
   border-radius: 10px;
-  /* transform: scaleX(0);
-  transform-origin: left;
-  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards; */
 }
 
 .range {
-  width: 45%;
+  width: 0;
 }
 
 .attack {
-  width: 50%;
+  width: 0;
 }
 
 .defnse {
-  width: 70%;
+  width: 0;
 }
 
 .sp-defnse {
-  width: 45%;
+  width: 0;
 }
 
 .speed {
-  width: 30%;
+  width: 0;
 }
 
 header {
@@ -144,6 +144,7 @@ header input[type="text"] {
   border-radius: 20px;
   margin: 10px 205px;
   opacity: 0.3;
+  font-weight: 700;
 }
 
 nav {
@@ -191,20 +192,13 @@ span {
   font-weight: 100;
 }
 
-.card-contaner {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 3rem 0.5rem; */
-
+/* .card-contaner {
   width: 80%;
   display: grid;
   margin: 20px auto;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
-}
+} */
 .pokie-container {
   display: flex;
   flex-direction: column;
@@ -223,26 +217,26 @@ h1 {
 }
 
 .Card-container {
-  height: 201px;
+  height: 220px;
   width: 240px;
   margin: 10px;
-  background-color: rgb(111, 231, 165);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .card h1 {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   padding: 15px;
-  margin-left: -134px;
+  margin-right:  106px;
 }
 
 .card-pokie {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   /* transform: translate(107px, 25px); */
   margin-left: auto;
   margin-right: 55px;
