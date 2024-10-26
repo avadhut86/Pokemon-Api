@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Card from './Card'; // Assuming Card is imported correctly
+import Card from './Card'; 
 import axios from 'axios';
 
 const Main_Page = () => {
-  const [pokeData, setpokeData] = useState([]); // Initialize with an empty array
+  const [pokeData, setpokeData] = useState([]); 
   const [loading, setLoading] = useState(true);
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon");
   const [nextUrl, setnextUrl] = useState();
@@ -12,7 +12,7 @@ const Main_Page = () => {
   const pokeFun = async () => {
     setLoading(true);
     const res = await axios.get(url);
-    console.log(res.data.results); // Debugging: check the API response
+    console.log(res.data.results); 
     setnextUrl(res.data.next);
     setprevUrl(res.data.previous);
     getPokemon(res.data.results);

@@ -1,4 +1,7 @@
 import React from "react";
+import PokeDescription from "./PokeDescription";
+import { Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Card = ({ pokemon, loading }) => {
   const getBackgroundColor = (type) => {
@@ -42,7 +45,6 @@ const Card = ({ pokemon, loading }) => {
         return "#d31c81";
       case "shadow":
         return "#29292c";
-
       default:
         return "#757575";
     }
@@ -50,26 +52,41 @@ const Card = ({ pokemon, loading }) => {
 
   return (
     <>
+
+          <div className="search-container">
+            <Search className="search-icon" />
+            <input
+              type="text"
+              placeholder="Search here"
+              className="search-input"
+            />
+          </div>
+      
       {loading ? (
         <h1>Loading...</h1>
       ) : (
         pokemon.map((item, index) => {
-          const backgroundColor = getBackgroundColor(item.types[0].type.name); // Get background color for the primary type
+          const backgroundColor = getBackgroundColor(item.types[0].type.name); 
+          
+          const pokemonId = item.id;
+          const cardImgPath = `/assets/pokemon/${pokemonId}.png`;
+         
 
           return (
+            <Link to={`/pokemon/${item.name}`} style={{ textDecoration: 'none' }}>
             <div
               key={index}
               className="Card-container"
-              style={{ backgroundColor }}
+              style={{ backgroundColor }} 
             >
               <div className="card">
-                <h1>{item.name}</h1>
+                <h1>{item.name.toUpperCase()}</h1>
               </div>
 
               <div className="img">
                 <img
                   className="card-pokie"
-                  src={item.sprites.front_default}
+                  src={cardImgPath}
                   alt={item.name}
                 />
               </div>
@@ -79,6 +96,7 @@ const Card = ({ pokemon, loading }) => {
                 <p>Weight: {item.weight}</p>
               </div>
             </div>
+            </Link>
           );
         })
       )}
