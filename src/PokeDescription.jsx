@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Search } from "lucide-react";
-import { useParams } from 'react-router-dom';
+import {useNavigate, useParams } from 'react-router-dom';
+import loadGif from '/assets/loading/DataLoading.gif'
 
 const PokeDescription = () => {
+   const navigate = useNavigate()
   const getBackgroundColor = (type) => {
     switch (type) {
       case "fire":
@@ -52,6 +54,7 @@ const PokeDescription = () => {
   
     const { name } = useParams(); 
     const [pokemonData, setPokemonData] = useState(null) 
+    const [searchInput, setSearchInput] = useState('')
 
     console.log(pokemonData)
 
@@ -63,8 +66,29 @@ const PokeDescription = () => {
     }, [name])
 
     if (!pokemonData) {
-      return <h1>Loading...</h1>;
-    }
+      return (
+        <div>
+        <h1>Loading...</h1>;
+        <img src={loadGif} alt="PikachuGif" className='pikachuLoad' />;
+        </div>
+      ) 
+     }
+
+     const handleSearch = () =>{
+      if (searchInput){
+        navigate(`/pokemon/${searchInput.toLowerCase()}`)
+        fetchPokemon(searchInput.toLowerCase());
+      }
+     }
+     console.log(handleSearch)
+
+     const handleKeyPress = (e) => {
+      if (e.key === 'Enter') {
+        handleSearch(null);
+      }
+    };
+
+    console.log(loadGif)
     const pokemonId = pokemonData.id;
     const imagePath =  `/assets/pokemon/${pokemonId}.png`;
     
@@ -83,6 +107,9 @@ const PokeDescription = () => {
               type="text"
               placeholder="Search here"
               className="search-input"
+              value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+            onKeyPress={handleKeyPress}
             />
           </div>
         </header>
@@ -147,6 +174,10 @@ const PokeDescription = () => {
             <p className="speed"style={{ width:`${pokemonData.stats[5].base_stat}%`}}></p>  {/*max = "200"*/} 
           </div>
           <div className="number"> {pokemonData.stats[5].base_stat} </div>
+
+          <div>
+          <p className="range" style={{ width:`${pokemonData.stats[0].base_stat}%`}}></p>
+          </div>
         </div>
       </div> }
 

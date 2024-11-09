@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from './Card'; 
 import axios from 'axios';
+import Loading from "./Loading";
 
 const Main_Page = () => {
   const [pokeData, setpokeData] = useState([]); 
@@ -33,17 +34,25 @@ const Main_Page = () => {
   useEffect(() => {
     pokeFun();
   }, [url]);
-
+  
+  if(loading){
+    return <Loading/>
+  }
+ 
+  
   return (
     <>
       <div className="card-mainpage">
         <Card pokemon={pokeData} loading={loading} />
       </div>
 
+    { !loading && pokeData.length > 0 && 
       <div className="btn-grp">
-        <button onClick={() => setUrl(prevUrl)} disabled={!prevUrl}>Previous</button>
-        <button onClick={() => setUrl(nextUrl)} disabled={!nextUrl}>Next</button>
-      </div>
+      <button onClick={() => setUrl(prevUrl)} disabled={!prevUrl}>Previous</button>
+      <button onClick={() => setUrl(nextUrl)} disabled={!nextUrl}>Next</button>
+    </div>}
+  
+      
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
-import PokeDescription from "./PokeDescription";
 import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
 
 const Card = ({ pokemon, loading }) => {
   const getBackgroundColor = (type) => {
@@ -50,27 +50,19 @@ const Card = ({ pokemon, loading }) => {
     }
   };
 
+  if(loading){
+    return <Loading/>
+  }
+
   return (
     <>
-
-          <div className="search-container">
-            <Search className="search-icon" />
-            <input
-              type="text"
-              placeholder="Search here"
-              className="search-input"
-            />
-          </div>
-      
-      {loading ? (
-        <h1>Loading...</h1>
-      ) : (
+         
+      {
         pokemon.map((item, index) => {
           const backgroundColor = getBackgroundColor(item.types[0].type.name); 
           
           const pokemonId = item.id;
           const cardImgPath = `/assets/pokemon/${pokemonId}.png`;
-         
 
           return (
             <Link to={`/pokemon/${item.name}`} style={{ textDecoration: 'none' }}>
@@ -99,7 +91,7 @@ const Card = ({ pokemon, loading }) => {
             </Link>
           );
         })
-      )}
+      }
     </>
   );
 };
