@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Search } from "lucide-react";
 import {useNavigate, useParams } from 'react-router-dom';
 import loadGif from '/assets/loading/DataLoading.gif'
+import Stats from './Stats';
 
 const PokeDescription = () => {
    const navigate = useNavigate()
@@ -141,14 +142,21 @@ const PokeDescription = () => {
           <img className="Pookie" src={imagePath} alt="" />
         </div>
 
-        <div className="information">
+        {/* <div className="Stats_conatainer">
           <div className="stats">
             <h3>Stats</h3>
           </div>
+          
+          <div className='powerName'>
           <div className="para">Hp</div>
+          </div>
+          
+          <div className='powerProgressBar'>
           <div className="bar">
             <p className="range" style={{ width:`${pokemonData.stats[0].base_stat}%`}}></p>
           </div>
+          </div>
+          
           <div className="number"> {pokemonData.stats[0].base_stat} </div>
 
           <div className="para">Attack</div>
@@ -171,17 +179,18 @@ const PokeDescription = () => {
 
           <div className="para">Speed</div>
           <div className="bar">
-            <p className="speed"style={{ width:`${pokemonData.stats[5].base_stat}%`}}></p>  {/*max = "200"*/} 
+            <p className="speed"style={{ width:`${pokemonData.stats[5].base_stat}%`}}></p>  
           </div>
           <div className="number"> {pokemonData.stats[5].base_stat} </div>
 
           <div>
           <p className="range" style={{ width:`${pokemonData.stats[0].base_stat}%`}}></p>
           </div>
-        </div>
-      </div> }
+        </div> */}
 
-
+         <Stats pokemonData = {pokemonData}/> 
+      </div> 
+      }
     </>
   )
 }

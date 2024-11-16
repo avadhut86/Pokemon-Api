@@ -1,5 +1,4 @@
 import React from "react";
-import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
 
