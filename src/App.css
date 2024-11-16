@@ -15,7 +15,7 @@ body{
 }
 
 .container {
-  height: 820px;
+  height: 750px;
 }
 
 .main {
@@ -67,13 +67,43 @@ body{
   font-size: 1rem;
   font-weight: bolder;
 }
-.information {
-  display: grid;
-  grid-template-columns: 200px 150px 550px 200px; 
-  /* 550 */
+
+.Stats_container {
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 30px;
+}
+
+.name_bar_number{
+  display: flex;
+  gap: 11px;
+}
+.stats {
+  display: flex;
   align-items: center;
-  row-gap: 27px;
-  transform: translate(215px, 10px);
+  margin-left: 280px;
+  color: white;
+  font-size: 2rem;
+}
+
+.powerName{
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  max-width: 139px;
+}
+
+.powerProgressBar{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ min-width: 500px;
+}
+
+.pokeNumbers{
+  display: flex;
+  flex-direction: column;
+  gap: 17px; 
 }
 
 .ability {
@@ -176,12 +206,7 @@ nav a {
   color: rgb(255, 255, 255);
 }
 
-.stats {
-  transform: translate(43px, -1px);
-  color: white;
-  font-size: 2rem;
-  grid-row: 1/6;
-}
+
 
 .img-sideinfo {
   margin-bottom: 80px;
@@ -295,6 +320,179 @@ transform: translate(700px, 140px);
   justify-content: center;
 }
 
-@media screen and (min-width:974px) {
-  
+ @media screen and (max-width:768px) {
+
+  .card-mainpage{
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 22px;
+  }
+  .Card-container {
+    height: 210px;
+    width: 215px;
+    margin: 5px
+  }
+
+  header input[type="text"] {
+    width: 290px;
+    padding: 13px;
+    margin: 20px 28px;  
+  }
+
+  .container{
+    min-height: 100vh;
+  }
+
+  .search-icon {
+    transform: translate(296px, 7px);
 }
+
+.main{
+  margin-left: 25px ;
+}
+.main h1 {
+  font-size: 13rem;
+  position: absolute;
+  left: 180px;
+  top: 58px;
+}
+
+.grass img{
+  height: 75px;
+}
+
+.Pookie {
+  height: 300px;
+  width: 300px;
+}
+
+.img-sideinfo {
+  margin-bottom: 65px;
+}
+
+.name h2 {
+  font-size: 2.5rem;
+}
+
+.stats {
+  margin-left: 5px;
+  font-size: 25px;
+}
+
+.powerProgressBar{
+  min-width: 345px;
+}
+
+.pikachuLoad{
+  transform: translate(320px, 184px);
+}
+
+.loading_gif{
+  height: 250px;
+  width: 250px;
+  transform: translate(272px, 293px);
+}
+
+}  
+
+ @media  screen and (max-width:480px) {
+  body {
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+  .container {
+    min-height: 100vh;
+    max-width: 100vw; /* Prevents container from overflowing */
+    overflow-x: hidden; /* Additional safeguard for overflow */
+  }
+
+  .card-mainpage {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 5px;
+    max-width: 100%; /* Prevents cards from overflowing */
+  }
+
+  .Card-container {
+    height: 190px;
+    width: 183px;
+    margin: 7px;
+    max-width: 100%; /* Ensure cards are responsive */
+  }
+  .card-pokie {
+    height: 90px;
+    width: 90px;
+  }
+  header input[type="text"] {
+    margin: -13px 63px;
+}
+
+.container{
+  min-height: 100vh;
+  min-width: fit-content;
+}
+
+.search-icon {
+  transform: translate(312px, 26px);
+}
+
+.main h1 {
+  font-size: 9rem;
+  left: 25px;
+  top: 71px;
+}
+
+.main{
+  flex-direction: column-reverse;
+}
+
+.Pookie {
+  height: 250px;
+  width: 250px;
+  transform: translate(-72px, 35px);
+}
+
+.img-sideinfo {
+  transform: translate(-35px, 15px);
+  margin-bottom: 30px;
+}
+
+.name h2 {
+  font-size: 2.6rem;
+}
+
+.grass img{
+  height: 70px;
+}
+
+.stats {
+  position: absolute;
+  margin-left: 179px;
+  font-size: 25px;
+}
+
+.name_bar_number{
+  display: flex;
+position: absolute;
+bottom: 80px;
+left: 25px;
+}
+
+.powerProgressBar{
+  transform: translate(-33px, 10px);
+  min-width: 237px;
+}
+.pokeNumbers{
+  margin-right: 10px;
+}
+
+.pikachuLoad{
+  transform: translate(166px, 262px);
+}
+
+.loading_gif{
+  height: 200px;
+  width: 200px;
+  transform: translate(115px, 310px);
+}
+
+}  
