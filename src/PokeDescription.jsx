@@ -142,52 +142,6 @@ const PokeDescription = () => {
           <img className="Pookie" src={imagePath} alt="" />
         </div>
 
-        {/* <div className="Stats_conatainer">
-          <div className="stats">
-            <h3>Stats</h3>
-          </div>
-          
-          <div className='powerName'>
-          <div className="para">Hp</div>
-          </div>
-          
-          <div className='powerProgressBar'>
-          <div className="bar">
-            <p className="range" style={{ width:`${pokemonData.stats[0].base_stat}%`}}></p>
-          </div>
-          </div>
-          
-          <div className="number"> {pokemonData.stats[0].base_stat} </div>
-
-          <div className="para">Attack</div>
-          <div className="bar">
-            <p className="attack" style={{ width:`${pokemonData.stats[1].base_stat}%`}}></p>
-          </div>
-          <div className="number"> {pokemonData.stats[1].base_stat} </div>
-
-          <div className="para">Defense</div>
-          <div className="bar">
-            <p className="defnse"style={{ width:`${pokemonData.stats[2].base_stat}%`}}></p>
-          </div>
-          <div className="number"> {pokemonData.stats[2].base_stat}</div>
-
-          <div className="para">Special-Defense</div>
-          <div className="bar">
-            <p className="sp-defnse"style={{ width:`${pokemonData.stats[4].base_stat}%`}}></p>
-          </div>
-          <div className="number"> {pokemonData.stats[4].base_stat} </div>
-
-          <div className="para">Speed</div>
-          <div className="bar">
-            <p className="speed"style={{ width:`${pokemonData.stats[5].base_stat}%`}}></p>  
-          </div>
-          <div className="number"> {pokemonData.stats[5].base_stat} </div>
-
-          <div>
-          <p className="range" style={{ width:`${pokemonData.stats[0].base_stat}%`}}></p>
-          </div>
-        </div> */}
-
          <Stats pokemonData = {pokemonData}/> 
       </div> 
       }

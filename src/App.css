@@ -181,16 +181,24 @@ header input[type="text"] {
   outline:none;
 }
 
-nav {
+.navigation{
   display: flex;
-  gap: 20px;
-  transform: translate(750px, 8px);
+  height: 4rem;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+.navigation input{
+  width: 404px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 9px 421px;
+    border: 2px solid black;
+    font-weight: 300;
+}
+
+.navigation img{
+    width: 154px;
+    height: 50px;
+    margin-left: 30px;
 }
 
 .search-icon {
@@ -239,7 +247,7 @@ h1 {
 .Card-container {
   height: 220px;
   width: 240px;
-  margin: 10px;
+  margin: 5px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -251,7 +259,7 @@ h1 {
   font-size: 16px;
   color: white;
   padding: 15px;
-  margin-right:  106px;
+  /* margin-right:  106px; */
 }
 
 .card-pokie {
@@ -283,8 +291,10 @@ h1 {
 .card-mainpage {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .btn-grp button {
   background-color: rgba(168, 211, 168, 0.893);
@@ -320,11 +330,28 @@ transform: translate(700px, 140px);
   justify-content: center;
 }
 
- @media screen and (max-width:768px) {
 
-  .card-mainpage{
+
+.card-mainpage a{
+  display: flex;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+ @media screen and (max-width:768px) {
+  .navigation{
+ justify-content: center;
+  }
+
+  .navigation input{
+    width: 390px;
+    padding: 12px;
+    margin: 9px 98px;
+  }
+ .card-mainpage{
     grid-template-columns: repeat(3,1fr);
-    margin-left: 22px;
   }
   .Card-container {
     height: 210px;
@@ -408,19 +435,19 @@ transform: translate(700px, 140px);
 
   .card-mainpage {
     grid-template-columns: repeat(2, 1fr);
-    margin-left: 5px;
+    /* margin-left: 2px; */
     max-width: 100%; /* Prevents cards from overflowing */
   }
 
   .Card-container {
-    height: 190px;
-    width: 183px;
+    height: 11rem;
+    width: 11rem;
     margin: 7px;
     max-width: 100%; /* Ensure cards are responsive */
   }
   .card-pokie {
-    height: 90px;
-    width: 90px;
+    height: 5rem;
+    width: 5rem;
   }
   header input[type="text"] {
     margin: -13px 63px;
@@ -446,13 +473,13 @@ transform: translate(700px, 140px);
 }
 
 .Pookie {
-  height: 250px;
-  width: 250px;
-  transform: translate(-72px, 35px);
+  height: 12rem;
+    width: 12rem;
+    transform: translate(-105px, 35px);
 }
 
 .img-sideinfo {
-  transform: translate(-35px, 15px);
+  transform: translate(-63px, 15px);
   margin-bottom: 30px;
 }
 
@@ -463,23 +490,18 @@ transform: translate(700px, 140px);
 .grass img{
   height: 70px;
 }
-
+.Stats_container{ flex-direction: column; }
 .stats {
-  position: absolute;
-  margin-left: 179px;
-  font-size: 25px;
+ justify-content: center;
 }
 
 .name_bar_number{
-  display: flex;
-position: absolute;
-bottom: 80px;
-left: 25px;
+  justify-content: center;
 }
 
 .powerProgressBar{
   transform: translate(-33px, 10px);
-  min-width: 237px;
+  min-width: 142px;
 }
 .pokeNumbers{
   margin-right: 10px;
@@ -495,4 +517,47 @@ left: 25px;
   transform: translate(115px, 310px);
 }
 
+.two-info p{
+  font-size: small;
+}
+
+.navigation{
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation img{
+  width: 6rem;
+  margin-top: 32px;
+}
+
+.navigation input {
+  padding: 5px;
+    width: 300px;
+    margin-bottom: 35px
+}
+
+.suggestions-list {
+  z-index: 1;
+}
+
 }  
+
+.suggestions-list {
+  position: absolute;
+  background:#b3aeae;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  width: 30%;
+  /* left: 574px; */
+  top: 69px;
+}
+.suggestions-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+
