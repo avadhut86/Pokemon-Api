@@ -12,10 +12,11 @@
 body{
   width: 100vw;
   overflow-x: hidden;
+  background-color: #E8E8E8;
 }
 
 .container {
-  height: 750px;
+  height: 100vh;
 }
 
 .main {
@@ -184,15 +185,17 @@ header input[type="text"] {
 .navigation{
   display: flex;
   height: 4rem;
+  background-color: black;
 }
 
 .navigation input{
-  width: 404px;
+  width: 380px;
     padding: 10px;
     border-radius: 20px;
     margin: 9px 421px;
     border: 2px solid black;
     font-weight: 300;
+    border: none;
 }
 
 .navigation img{
@@ -337,6 +340,28 @@ transform: translate(700px, 140px);
     justify-content: center;
     text-decoration: none;
     text-align: center;
+}
+
+.suggestions-list {
+  position: absolute;
+  background:#b3aeae;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  width: 25%;
+  left: 606px;
+  top: 62px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: -4px 9px 12px white ;
+}
+.suggestions-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.suggestions-list li:hover {
+  /* background-color: #f0f0f0; */
+  background-color: #d5f571;
 }
 
 
@@ -497,11 +522,13 @@ transform: translate(700px, 140px);
 
 .name_bar_number{
   justify-content: center;
+  gap: 39px;
 }
 
 .powerProgressBar{
   transform: translate(-33px, 10px);
-  min-width: 142px;
+  min-width: 178px;
+  gap: 8px;
 }
 .pokeNumbers{
   margin-right: 10px;
@@ -524,6 +551,7 @@ transform: translate(700px, 140px);
 .navigation{
   flex-direction: column;
   align-items: center;
+  height: 6rem;
 }
 
 .navigation img{
@@ -538,26 +566,13 @@ transform: translate(700px, 140px);
 }
 
 .suggestions-list {
+  left: 56px;
+  width: 300px;
+  top: 88px;
   z-index: 1;
 }
 
 }  
 
-.suggestions-list {
-  position: absolute;
-  background:#b3aeae;
-  border: 1px solid #ccc;
-  max-height: 150px;
-  overflow-y: auto;
-  width: 30%;
-  /* left: 574px; */
-  top: 69px;
-}
-.suggestions-list li {
-  padding: 8px 12px;
-  cursor: pointer;
-}
-.suggestions-list li:hover {
-  background-color: #f0f0f0;
-}
+
 
