@@ -116,7 +116,7 @@ const PokeDescription = () => {
         </header>
 
         <div className="main">
-          <h1>#0{pokemonData.id}</h1>
+          <h1>#{pokemonData.id}</h1>
           <div className="img-sideinfo">
             <div className="grass">
               <img src={typeImg} alt="" />

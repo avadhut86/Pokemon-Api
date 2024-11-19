@@ -23,7 +23,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: end;
-  margin-top: 130px;
+  margin-top: 120px;
 }
 
 .Pookie {
@@ -209,7 +209,7 @@ header input[type="text"] {
 }
 
 .main h1 {
-  font-size: 17rem;
+  font-size: 15rem;
   opacity: 0.1;
   position: absolute;
   left: 500px;
@@ -488,8 +488,8 @@ transform: translate(700px, 140px);
 }
 
 .main h1 {
-  font-size: 9rem;
-  left: 25px;
+  font-size: 6rem;
+  left: 119px;
   top: 71px;
 }
 
@@ -509,7 +509,7 @@ transform: translate(700px, 140px);
 }
 
 .name h2 {
-  font-size: 2.6rem;
+  font-size: 2.2rem;
 }
 
 .grass img{
@@ -557,6 +557,7 @@ transform: translate(700px, 140px);
 .navigation img{
   width: 6rem;
   margin-top: 32px;
+  margin-left: 0px;
 }
 
 .navigation input {
